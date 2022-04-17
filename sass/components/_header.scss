@@ -1,0 +1,77 @@
+@use '../abstracts' as a;
+@use '../layout/layout' as c;
+
+.header{
+   width: 100%;
+   position: fixed;
+   top: 24px;
+   left: 0;
+   z-index: 100;
+   font-size: a.$b-reg-size;
+   line-height: a.$b-reg-height;
+   font-weight: a.$b-reg-weight;
+}
+
+.nav__brand{
+   height: 100%;
+}
+
+.nav{
+   height: 69px;
+   max-width: 1191px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   @include c.container;
+}
+
+.nav__menu{
+   width: 60%;
+   height: 100%;
+   margin-right: auto;
+   margin-left: 69px;
+   top: 0;
+}
+
+.nav__list{
+   display: flex;
+   flex-direction: row;
+   column-gap: 41px;
+   overflow: hidden;
+}
+
+.item__text--hover::before{
+   content: "";
+   position: absolute;
+   background: a.$gray-80;
+   bottom: 0px;
+   height: 2px;
+   width: 0px;
+   transition: all .5s ease;
+}
+
+.item__text--hover{
+   line-height: 30px;
+}
+
+.nav__item{
+   display: block;
+   position: relative;
+   a{
+      color: a.$gray-80;
+   }
+}
+
+.item__text--hover:hover:before{
+   width: 100%;
+}
+
+.item__text--active::before{
+   content: "";
+   position: absolute;
+   background: a.$gray-80;
+   bottom: 0px;
+   height: 2px;
+   width: 100%;
+   transition: all .5s ease;
+}

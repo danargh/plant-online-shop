@@ -1,0 +1,16 @@
+.container{
+   width: 20px;
+}
+.container ul li:before{
+   content: '';
+   height: 2px;
+   width: 0px;
+   background: black;
+   position: absolute;
+   margin-top: 20px;
+   transition: all .5s ease;
+}
+
+.container ul li:hover:before{
+   width: 100%;
+}

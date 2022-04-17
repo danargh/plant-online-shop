@@ -1,0 +1,11 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "Front end untuk project plant website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Danar Ghulamsyah",
+  "license": "ISC"
+}

@@ -1,0 +1,21 @@
+@use '../components' as c;
+@use '../abstracts/' as a;
+@use '../layout/layout' as l;
+
+.home{
+   background-image: url('../../assets/img/home-bg.png');
+   background-repeat: no-repeat;
+   background-position: 60% 0;
+   background-position: ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 500px;
+   padding: 100px 0px 0px;
+   &__container{
+      height: 100%;
+      width: 1191px;
+      margin-top: 0;
+      @include l.container;
+   }
+}
