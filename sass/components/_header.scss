@@ -4,12 +4,15 @@
 .header{
    width: 100%;
    position: fixed;
-   top: 24px;
+   top: 0;
    left: 0;
+   padding-top: 24px;
+   padding-bottom: 5px;
    z-index: 100;
    font-size: a.$b-reg-size;
    line-height: a.$b-reg-height;
    font-weight: a.$b-reg-weight;
+   // background-color: a.$white;
 }
 
 .nav__brand{
@@ -29,7 +32,7 @@
    width: 60%;
    height: 100%;
    margin-right: auto;
-   margin-left: 69px;
+   margin-left: 30px;
    top: 0;
 }
 
