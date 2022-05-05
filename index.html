@@ -5,7 +5,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Halaman Utama</title>
+
    <!-- favicon -->
    <link rel="shortcut icon" href="assets/icon/logo.png" type="image/x-icon">
 
@@ -19,6 +20,7 @@
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
       integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
       crossorigin="" />
+
 </head>
 
 <body>
@@ -31,36 +33,46 @@
          </a>
          <div class="nav__menu container">
             <ul class="nav__list">
-               <li class="nav__item item__text--hover item__text--active">
+               <li class="nav__item item__text--hover">
                   <a href="#home">Home</a>
                </li>
                <li class="nav__item item__text--hover">
-                  <a href="#aboutus">About Us</a>
+                  <a href="#about-us">About Us</a>
                </li>
                <li class="nav__item item__text--hover">
-                  <a href="#ourproducts">Our Products</a>
+                  <a href="#our-products">Our Products</a>
                </li>
                <li class="nav__item item__text--hover">
                   <a href="#faqs">FAQs</a>
                </li>
                <li class="nav__item item__text--hover">
-                  <a href="#contactus">Contact Us</a>
+                  <a href="#contact-us">Contact Us</a>
                </li>
             </ul>
          </div>
          <div class="nav__icon">
             <ul class="nav__list">
                <li class="nav__item">
-                  <a href="#"><img src="assets/icon/Search.png" alt="search"></a>
-               </li>
-               <li class="nav__item nav__dropdown">
-                  <a href="#"><img src="assets/icon/Account.png" alt="account"></a>
+                  <form class="nav__search-bar" action="#">
+                     <input type="text" id="search" name="search">
+                  </form>
+                  <label for="search">
+                     <i class="ri-search-line"></i>
+                  </label>
                </li>
                <li class="nav__item">
-                  <a href="#"><img src="assets/icon/Shopping Bag.png" alt="shopping bag"></a>
+                  <div onclick="toggleUser();" class="nav__user-toggle"><i class="ri-user-3-line"></i></div>
+                  <div class="nav__user-dropdown">
+                     <a href="#">Login</a>
+                     <a href="#">Register</a>
+                  </div>
+               </li>
+               <li class="nav__item nav__dropdown">
+                  <a href="#"><i class="ri-shopping-basket-2-line"></i></a>
                </li>
             </ul>
          </div>
+         <div></div>
       </nav>
    </header>
 
@@ -257,7 +269,7 @@
       </section>
 
       <!-- PRODUCTS CATEGORY -->
-      <section class="category" id="category">
+      <section class="category">
          <div class="category__container">
             <div class="category__header">
                <h2 class="category__title">Find a Plant by Category</h2>
@@ -520,12 +532,7 @@
       integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
       crossorigin=""></script>
 
-
    <script src="dist/main.js"></script>
-
-   <!-- font awesome kits module  -->
-   <script src="https://kit.fontawesome.com/1049dcc2c3.js" crossorigin="anonymous"></script>
-
 
 </body>
 

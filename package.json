@@ -11,12 +11,10 @@
   "author": "Danar Ghulamsyah",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.6.0",
-    "lodash": "^4.17.21"
+    "jquery": "^3.6.0"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
-    "leaflet": "^1.8.0",
     "sass-loader": "^12.6.0",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.2",

@@ -3,6 +3,30 @@ import * as $ from "jquery";
 // let L = require("leaflet");
 // module jquery
 
+// NAVIGATION
+const sections = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+   const scrollY = window.pageYOffset;
+
+   sections.forEach((current) => {
+      const sectionHeight = current.offsetHeight,
+         sectionTop = current.offsetTop - 58,
+         sectionId = current.getAttribute("id");
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+         document
+            .querySelector(".nav__menu a[href*=" + sectionId + "]")
+            .classList.add("item__text--active");
+      } else {
+         document
+            .querySelector(".nav__menu a[href*=" + sectionId + "]")
+            .classList.remove("item__text--active");
+      }
+   });
+}
+window.addEventListener("scroll", scrollActive);
+
 // ACCORDION
 const accordionItems = document.querySelectorAll(".accord__items");
 
@@ -31,6 +55,13 @@ const toggleItem = (item) => {
       item.classList.add("accord__content--open");
    }
 };
+
+// DROPDOWN-USER
+function toggleUser() {
+   document
+      .getElementsByClassName("nav__user-dropdown")
+      .classList.toggle("nav__user-dropdown--show");
+}
 
 // MAPS
 let map = L.map("contact-us__maps").setView([51.505, -0.09], 13);
