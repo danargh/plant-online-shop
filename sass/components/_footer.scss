@@ -47,25 +47,43 @@
       border: none;
       background: a.$primary-1;
       color: a.$white;
+      cursor: pointer;
+      border: 2px solid a.$primary-1;
+      transition: .3s;
+   }
+   &-input__submit:hover{
+      background-color: white;
+      color: a.$primary-1;
+      border: 2px solid a.$primary-1;
    }
    &__sosmed{
       margin-top: 35px;
       font-size: 24px;
+      display: flex;
+      justify-content: space-between;
+      width: 120px;
    }
-   .footer-sosmed__item{
-      margin-right: 12px;
-      transition: .3s;
+   &-sosmed__item{
       i{
+         position: relative;
          color: a.$gray-80;
+         transition: .5s;
+         bottom: 0;
+         // bottom 0 ini harus di tulis agar transisi bekerja
+      }
+      i:hover{
+         // jangan pake left top e.t.c karena tidak bisa digunakan dengan transition
+         bottom: 8px;
       }
    }
-   .footer-sosmed__item:hover{
-      transform: translateY(-8px);
-   }
+
    &__content{
       display: flex;
       width: 462px;
       justify-content: space-between;
+      a p:hover{
+         color: a.$gray-80;
+      }
    }
    &__cs, &__source, &__legal{
       margin-top: 16px;

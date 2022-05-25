@@ -39,4 +39,8 @@
          margin-left: 21px;
       }
    }
+   &__button{
+      margin-top: 50px;
+      @include c.button;
+   }
 }

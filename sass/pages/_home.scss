@@ -51,6 +51,11 @@
          i{
             font-size: 24px;
             color: a.$gray-80;
+            transition: .5s;
+            position: relative;
+         }
+         i:hover{
+            margin-left: 8px;
          }
       }
       &::before{
@@ -69,14 +74,9 @@
       margin-left: 440px;
       z-index: -100;
    }
-}
-
-.button{
-   @include c.button;
-   margin-top: 50px;
-   i{
-      font-size: 24px;
-      color: a.$white;
+   &__button{
+      margin-top: 50px;
+      @include c.button;
    }
 }
 

@@ -87,6 +87,10 @@
       margin-top: 48px;
       display: flex;
       align-items: center;
+      input {
+         border: 0;
+         border: 2px solid a.$primary-1;
+      }
    }
    &__submit{
       font-size: a.$b-reg-size;
@@ -95,6 +99,13 @@
       font-family: a.$body-font;
       cursor: pointer;
       margin: 0;
+      @include c.button;
+      transition: .3s;
+   }
+   &__submit:hover{
+      background-color: white;
+      color: a.$primary-1;
+      border: 2px solid a.$primary-1;
    }
 }
 #contact-us__maps{

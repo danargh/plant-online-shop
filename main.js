@@ -1,5 +1,5 @@
 // let $ = require("jquery");
-import * as $ from "jquery";
+// import * as $ from "jquery";
 // let L = require("leaflet");
 // module jquery
 
@@ -26,6 +26,25 @@ function scrollActive() {
    });
 }
 window.addEventListener("scroll", scrollActive);
+
+// SEARCH BAR
+let searchBar = document.querySelector(".nav__search-bar-label");
+searchBar.addEventListener("click", function () {
+   document
+      .querySelector(".nav__search-bar-input")
+      .classList.toggle("nav__search-bar-input--show");
+});
+
+// UBAH BACKGROUND HEADER SAAT SCROLL
+function scrollHeader() {
+   let header = document.getElementById("header");
+   if (this.scrollY >= 80) {
+      header.classList.add("scroll-header");
+   } else {
+      header.classList.remove("scroll-header");
+   }
+}
+window.addEventListener("scroll", scrollHeader);
 
 // ACCORDION
 const accordionItems = document.querySelectorAll(".accord__items");
@@ -56,12 +75,13 @@ const toggleItem = (item) => {
    }
 };
 
-// DROPDOWN-USER
-function toggleUser() {
-   document
-      .getElementsByClassName("nav__user-dropdown")
-      .classList.toggle("nav__user-dropdown--show");
-}
+// // DROPDOWN-USER
+// let toggleUser = document.querySelector(".nav__user-toggle");
+// toggleUser.addEventListener("click", function () {
+//    document
+//       .querySelector(".nav__user-dropdown")
+//       .classList.toggle("nav__user-dropdown--show");
+// });
 
 // MAPS
 let map = L.map("contact-us__maps").setView([51.505, -0.09], 13);
@@ -78,3 +98,30 @@ L.tileLayer(
 ).addTo(map);
 
 var marker = L.marker([51.5, -0.09]).addTo(map);
+
+// SCROLL REVEAL ANIMATION
+// animasi agar saat buka website, terdapat animasi yang memunculkan konten
+const sr = ScrollReveal({
+   origin: "top",
+   distance: "60px",
+   duration: 2500,
+   delay: 400,
+   // reset: true
+});
+
+sr.reveal(`.home__header, .faqs`);
+sr.reveal(`.home__bg`, {
+   delay: 500,
+});
+sr.reveal(`.home__social`, {
+   delay: 600,
+});
+sr.reveal(`.about-us__img, .contact-us__content`, {
+   origin: "left",
+});
+sr.reveal(`.about-us__header, .contact-us__header`, {
+   origin: "right",
+});
+sr.reveal(`.product__card, .footer, .category__container`, {
+   interval: 100,
+});
